@@ -19,4 +19,11 @@ class MultiplicationTest {
     //For null value as both number.
     assertThrows(IllegalArgumentException.class, () -> multiplication.mulNumber(null,null));
   }
+
+  @Test
+  public void maxIntRangeTest(){
+    assertThrows(NumberFormatException.class,()->multiplication.mulNumber(Integer.MAX_VALUE,2));
+    assertEquals(0,multiplication.mulNumber(Integer.MAX_VALUE,0));
+    assertEquals(Integer.MAX_VALUE,multiplication.mulNumber(Integer.MAX_VALUE,1));
+  }
 }
