@@ -23,5 +23,9 @@ class SumNumberTest {
         // For checking 0.
         int res3 = sumNumber.addNumber(0,0);
         assertEquals(0,res3);
+
+        //For other method.
+        int res4 = sumNumber.addNumber(0,0,1);
+        assertEquals(1,res4);
     }
 }
